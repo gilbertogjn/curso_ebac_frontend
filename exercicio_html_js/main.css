@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 8px;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+input {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#msg-erro, #msg-sucesso {
+    display: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#msg-erro {
+    background-color: rgb(204, 80, 80);
+    color: #fff;
+}
+
+#msg-sucesso {
+    background-color: rgb(42, 129, 42);
+    color: #fff;
+}
+
+#btn-valida {
+    background-color: rgb(55, 55, 214);
+    color: #fff;
+    font-weight: bold;
+    padding: 8px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#btn-valida:hover {
+    background-color: rgb(37, 37, 179);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
