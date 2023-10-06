@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+.container {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+header {
+    background-color: blueviolet;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header form {
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header form input {
+    width: 70%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+}
+
+header form button {
+    width: 28%;
+    cursor: pointer;
+}
+
+main {
+    height: 400px;
+    padding: 20px;
+}
+
+main ul li {
+    list-style: none;
+    border-bottom: 1px solid #0000001e;
+    padding: 8px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
