@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const profileAvatar = document.querySelector('#profile-avatar')
     const profileName = document.querySelector('#profile-name')
     const profileUsername = document.querySelector('#profile-username')
@@ -8,10 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const profileLink = document.querySelector('#profile-link')
 
     fetch('https:/api.github.com/users/gilbertogjn')
-        .then(function(res) {
+        .then(function (res) {
+            if (!res.ok) {
+                throw new Error('Erro de resposta da rede');
+            }
             return res.json()
         })
-        .then(function(json) {
+        .then(function (json) {
+            console.log('Dados recebidos com sucesso:', json);
             profileAvatar.src = json.avatar_url
             profileName.innerHTML = json.name
             profileUsername.innerHTML = json.login
@@ -19,5 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
             seguidores.innerHTML = json.followers
             seguindo.innerHTML = json.following
             profileLink.href = json.html_url
+        })
+        .catch(function(erro) {
+            alert('Ocorreu um erro ao buscar os dados, tente novamente mais tarde')
         })
 })
